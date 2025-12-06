@@ -1,0 +1,5 @@
+# Staging Config Server
+spring:
+  cloud:
+    config:
+      uri: http://config-server-staging:8888

@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8888
+      fail-fast: true
+      retry:
+        initial-interval: 1500
+        max-attempts: 10000
+        max-interval: 1000
+        multiplier: 1.5
+      username: ${CONFIG_SERVER_USERNAME:config}
+      password: ${CONFIG_SERVER_PASSWORD:config}
+      label: master
+    # Optional: If using service discovery for config server
+    # discovery:
+    #   enabled: true
+    #   service-id: config-server
